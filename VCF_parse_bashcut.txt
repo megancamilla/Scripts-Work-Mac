@@ -1,0 +1,6 @@
+cat WAI320.intersectexononlyzeroCov_exonname.bed \
+| cut -f 13 \
+| tr ";" "\n" \
+| grep Parent= \
+| cut -f 2 -d : \
+| uniq - WAI320.genes_withzeroCov.list

@@ -1,0 +1,1 @@
+java -jar ~/Bin/GenomeAnalysisTK-2.3-5-g49ed93c/GenomeAnalysisTK.jar -T CountReads -R exampleFASTA.fasta -I exampleBAM.bam 

@@ -1,0 +1,6 @@
+mysql -u meganm -p;
+USE Pnodorum_V3_JGI;
+select GeneCatalog.Scaffolds_ScaffoldNum, GeneCatalog.StartPos, GeneCatalog.StopPos, GeneCatalog.Strand
+ 	FROM GeneCatalog
+	WHERE Genecatalog.DNAtype ="start_codon"; > startpos.csv ; 
+	> startpos.txt

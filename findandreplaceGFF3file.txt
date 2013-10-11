@@ -1,0 +1,8 @@
+ID=transcript:(.+);Parent=gene:(.+)\tgene
+
+\t(chr_\d+)\tprotein_coding\t(\w+)\t(.+)\t(.+)\t.+\t(.+)\t(\d)\t(.+)
+find:
+(Reference Assembly IPO323\.v2\.0)	(.+)	((\d+).\d+)	exon	(chr_\d+)	(.+)	(.+)	(.)	(\d)
+(Reference Assembly IPO323\.v2\.0)	(.+)		gene	(chr_\d+)	(.+)	(.+)	(.)	(\d)
+replace:
+\1\t\2\t\3\texon\t\5\t\6\t\7\t\8\t\9\r\10\t\11\t\4\tgene\t\12\t\13\t\14\t\15\t\16\r

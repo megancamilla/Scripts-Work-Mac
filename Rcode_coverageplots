@@ -1,0 +1,110 @@
+## Plotting in R with ggplot 2
+
+## Start R
+R
+## load the ggplot library
+library(ggplot2)
+
+
+
+## Generate histograms using ggplot 2
+
+## import tab-delimited bedgraph file, file does not contain a header line
+WAI320cov <- read.delim("~/Genomes/GATK_Variant_Detection/CoveragePlots/WAI320.genomecovBed.bedgraph", header=F)
+
+## generate a plot object using ggplot
+p<- ggplot(WAI320cov, aes(x=V4)) 
+
+## open a pdf device to write your plot to
+pdf("WAI320_chromosomeCov.pdf", width=6, height=6)
+
+### use print to write your plot to the open pdf document
+### p is the basic plot + histogram (bin=width of bar used for counting) xlim is scale on x axis + labels for your axes
+print(p + geom_histogram(bin=3) + xlim(0,100) + labs(title = "Genome Coverage WAI320", x="Coverage"))
+
+## Turn off the pdf device
+dev.off()
+
+chr1<- ggplot(WAI320cov)
+chr1 + geom_histogram(bin=3) + xlim(0, 1000) + labs(title = "Chromosome 1 Coverage", x= "Coverage")
+
+## histogram code for ggplot
+WAI321cov <- read.delim("~/Genomes/GATK_Variant_Detection/CoveragePlots/WAI321.genomecovBed.bedgraph", header=F)
+p<- ggplot(WAI321cov, aes(x=V4)) 
+pdf("WAI321_chromosomeCov.pdf", width=6, height=6)
+print(p + geom_histogram(bin=3) + xlim(0,100) + labs(title = "Genome Coverage WAI321", x="Coverage"))
+dev.off()
+
+## histogram code for ggplot
+WAI322cov <- read.delim("~/Genomes/GATK_Variant_Detection/CoveragePlots/WAI322.genomecovBed.bedgraph", header=F)
+p<- ggplot(WAI322cov, aes(x=V4)) 
+pdf("WAI322_chromosomeCov.pdf", width=6, height=6)
+print(p + geom_histogram(bin=3) + xlim(0,100) + labs(title = "Genome Coverage WAI322", x="Coverage"))
+dev.off()
+
+## histogram code for ggplot
+WAI323cov <- read.delim("~/Genomes/GATK_Variant_Detection/CoveragePlots/WAI323.genomecovBed.bedgraph", header=F)
+p<- ggplot(WAI323cov, aes(x=V4)) 
+pdf("WAI323_chromosomeCov.pdf", width=6, height=6)
+print(p + geom_histogram(bin=3) + xlim(0,100) + labs(title = "Genome Coverage WAI323", x="Coverage"))
+dev.off()
+
+## histogram code for ggplot
+WAI324cov <- read.delim("~/Genomes/GATK_Variant_Detection/CoveragePlots/WAI324.genomecovBed.bedgraph", header=F)
+p<- ggplot(WAI324cov, aes(x=V4)) 
+pdf("WAI324_chromosomeCov.pdf", width=6, height=6)
+print(p + geom_histogram(bin=3) + xlim(0,100) + labs(title = "Genome Coverage WAI324", x="Coverage"))
+dev.off()
+
+## histogram code for ggplot
+WAI326cov <- read.delim("~/Genomes/GATK_Variant_Detection/CoveragePlots/WAI326.genomecovBed.bedgraph", header=F)
+p<- ggplot(WAI326cov, aes(x=V4)) 
+pdf("WAI326_chromosomeCov.pdf", width=6, height=6)
+print(p + geom_histogram(bin=3) + xlim(0,100) + labs(title = "Genome Coverage WAI326", x="Coverage"))
+dev.off()
+
+## histogram code for ggplot
+WAI327cov <- read.delim("~/Genomes/GATK_Variant_Detection/CoveragePlots/WAI327.genomecovBed.bedgraph", header=F)
+p<- ggplot(WAI327cov, aes(x=V4)) 
+pdf("WAI327_chromosomeCov.pdf", width=6, height=6)
+print(p + geom_histogram(bin=3) + xlim(0,100) + labs(title = "Genome Coverage WAI327", x="Coverage"))
+dev.off()
+
+## histogram code for ggplot
+WAI328cov <- read.delim("~/Genomes/GATK_Variant_Detection/CoveragePlots/WAI328.genomecovBed.bedgraph", header=F)
+p<- ggplot(WAI328cov, aes(x=V4)) 
+pdf("WAI328_chromosomeCov.pdf", width=6, height=6)
+print(p + geom_histogram(bin=3) + xlim(0,100) + labs(title = "Genome Coverage WAI328", x="Coverage"))
+dev.off()
+## histogram code for ggplot
+WAI329cov <- read.delim("~/Genomes/GATK_Variant_Detection/CoveragePlots/WAI329.genomecovBed.bedgraph", header=F)
+p<- ggplot(WAI329cov, aes(x=V4)) 
+pdf("WAI329_chromosomeCov.pdf", width=6, height=6)
+print(p + geom_histogram(bin=3) + xlim(0,100) + labs(title = "Genome Coverage WAI329", x="Coverage"))
+dev.off()
+
+## histogram with limited x axis general code example
+p + geom_histogram(bin=5) + xlim(0,100) + labs(title = "Genome Coverage WAI320", x="Coverage")
+
+
+########### NOTE Jitter plots should be performed on a computer with HIGH MEM CAPACITY #################
+##Jitter plot of coverage by chromosome
+## Save image after creating the PDF
+WAI320cov$V1 <- factor(WAI320cov$V1, levels=c("chr_1","chr_2", "chr_3", "chr_4", "chr_5","chr_6", "chr_7","chr_8","chr_9","chr_10", "chr_11", "chr_12", "chr_13", "chr_14", "chr_15", "chr_16", "chr_17", "chr_18", "chr_19", "chr_20", "chr_21"))
+WAI321cov$V1 <- factor(WAI321cov$V1, levels=c("chr_1","chr_2", "chr_3", "chr_4", "chr_5","chr_6", "chr_7","chr_8","chr_9","chr_10", "chr_11", "chr_12", "chr_13", "chr_14", "chr_15", "chr_16", "chr_17", "chr_18", "chr_19", "chr_20", "chr_21"))
+WAI322cov$V1 <- factor(WAI322cov$V1, levels=c("chr_1","chr_2", "chr_3", "chr_4", "chr_5","chr_6", "chr_7","chr_8","chr_9","chr_10", "chr_11", "chr_12", "chr_13", "chr_14", "chr_15", "chr_16", "chr_17", "chr_18", "chr_19", "chr_20", "chr_21"))
+WAI323cov$V1 <- factor(WAI323cov$V1, levels=c("chr_1","chr_2", "chr_3", "chr_4", "chr_5","chr_6", "chr_7","chr_8","chr_9","chr_10", "chr_11", "chr_12", "chr_13", "chr_14", "chr_15", "chr_16", "chr_17", "chr_18", "chr_19", "chr_20", "chr_21"))
+WAI324cov$V1 <- factor(WAI324cov$V1, levels=c("chr_1","chr_2", "chr_3", "chr_4", "chr_5","chr_6", "chr_7","chr_8","chr_9","chr_10", "chr_11", "chr_12", "chr_13", "chr_14", "chr_15", "chr_16", "chr_17", "chr_18", "chr_19", "chr_20", "chr_21"))
+WAI326cov$V1 <- factor(WAI326cov$V1, levels=c("chr_1","chr_2", "chr_3", "chr_4", "chr_5","chr_6", "chr_7","chr_8","chr_9","chr_10", "chr_11", "chr_12", "chr_13", "chr_14", "chr_15", "chr_16", "chr_17", "chr_18", "chr_19", "chr_20", "chr_21"))
+WAI327cov$V1 <- factor(WAI327cov$V1, levels=c("chr_1","chr_2", "chr_3", "chr_4", "chr_5","chr_6", "chr_7","chr_8","chr_9","chr_10", "chr_11", "chr_12", "chr_13", "chr_14", "chr_15", "chr_16", "chr_17", "chr_18", "chr_19", "chr_20", "chr_21"))
+WAI328cov$V1 <- factor(WAI328cov$V1, levels=c("chr_1","chr_2", "chr_3", "chr_4", "chr_5","chr_6", "chr_7","chr_8","chr_9","chr_10", "chr_11", "chr_12", "chr_13", "chr_14", "chr_15", "chr_16", "chr_17", "chr_18", "chr_19", "chr_20", "chr_21"))
+WAI329cov$V1 <- factor(WAI329cov$V1, levels=c("chr_1","chr_2", "chr_3", "chr_4", "chr_5","chr_6", "chr_7","chr_8","chr_9","chr_10", "chr_11", "chr_12", "chr_13", "chr_14", "chr_15", "chr_16", "chr_17", "chr_18", "chr_19", "chr_20", "chr_21"))
+
+##Jitter plot of coverage by chromosome
+## generate a PDF and save it to file
+p <- qplot(V1, V4, data= WAI320cov, geom="jitter", color=V1)
+png("WAI320_CovbyChrom.png", width=6, height=6)
+print(p + labs(title = "Coverage across chromosome", "Chromosome", y="Coverage"))
+dev.off()
+
+
