@@ -23,3 +23,32 @@ print(p + geom_histogram(bin=3) + xlim(0,100) + labs(title = "Genome Coverage WA
 
 ## Turn off the pdf device
 dev.off()
+
+
+## import snp vcf file
+WAI320_chr13snps <- read.delim("~/Genomes/MySQL_inputfiles/R.infile", header=F)
+
+p <- ggplot(WAI320_chr13snps, aes(x=V3, fill=V4))
+
+print(p + geom_histogram(bin=10000))
+
+
+
+WAI320_chr5snps <- read.delim("~/Genomes/MySQL_inputfiles/R.chr_5.infile", header=F)
+WAI321_chr5snps<-read.delim("~/Genomes/MySQL_inputfiles/R321.chr_5.infile", header=F)
+both <-read.delim("~/Genomes/MySQL_inputfiles/320_321_chr5.txt", header=F)
+
+WAI320[]
+
+p <- ggplot(WAI320_chr5snps, aes(x=V3, color=V4))
+
+p2 <- ggplot(WAI321_chr5snps, aes(x=V3, color=V4))
+pboth<- ggplot(both, aes(x=V3, linetype=("",""), color=V4))
+
+print(p +geom_freqpoly(bin=50000) +labs(title = "SNPs in Chr5 Exons", x="Position"))
+print(p + geom_freqpoly(bin=100)+ xlim(1.975e6,2.0e6) +labs(title = "SNPs in Chr5 Exons", x="Position"))
+
+print(pboth + geom_freqpoly(bin=50000) +labs(title = "SNPs in Chr5 Exons", x="Position"))
+print(pboth +geom_freqpoly(bin=100000))
+
+

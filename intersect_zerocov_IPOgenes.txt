@@ -20,3 +20,6 @@ intersectBed -wao -a WAI326.zeroCOV.bed -b ~/Genomes/IPO323/Mgram_exononly.gff3 
 intersectBed -wao -a WAI327.zeroCOV.bed -b ~/Genomes/IPO323/Mgram_exononly.gff3 | grep protein > WAI327.intersectexononlyzeroCOV_exonname.bed
 intersectBed -wao -a WAI328.zeroCOV.bed -b ~/Genomes/IPO323/Mgram_exononly.gff3 | grep protein > WAI328.intersectexononlyzeroCOV_exonname.bed
 intersectBed -wao -a WAI329.zeroCOV.bed -b ~/Genomes/IPO323/Mgram_exononly.gff3 | grep protein > WAI329.intersectexononlyzeroCOV_exonname.bed
+
+
+s

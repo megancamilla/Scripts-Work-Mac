@@ -23,7 +23,7 @@ makeblastdb -in $inFASTA -input_type fasta -dbtype nucl -parse_seqids -mask_data
 
 blastdbcmd -db $Prefix -info
 
-mv $Prefix.* ../BLASTdbs
+#mv $Prefix.* ../BLASTdbs
 
 
 #MakeBlastdatapase.sh 321_z100_noextend.final.scaffolds.fasta  WAI321_scaffolds WAI321_BLAST_DB

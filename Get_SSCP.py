@@ -34,7 +34,7 @@ Protein_list=[]
 for line in INFILE:
     line = line.strip()
     field = line.split('\t')
-    protein = field[1]
+    protein = field[0]
     Protein_list.append(protein)
     pattern=re.compile('|'.join(Protein_list))
 

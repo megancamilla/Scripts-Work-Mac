@@ -6,6 +6,7 @@
 
 
 blastn -query $1 -db $2 -outfmt "7 qseqid qlen sseqid sstart send qstart qend evalue bitscore length pident" > $3.out
+#blastn -task 'blastn-short' -query $1 -db $2  > $3.out
 
 
 
@@ -31,4 +32,14 @@ blastn -query $1 -db $2 -outfmt "7 qseqid qlen sseqid sstart send qstart qend ev
 # Blastn_shell_taboutput.sh ../augustus/filtered_augustus.codingseq ~/Genomes/Velvet_assembly/BLASTdbs/zt79 zt79_Blast_abinitiogenes;
 # Blastn_shell_taboutput.sh ../augustus/filtered_augustus.codingseq ~/Genomes/IPO323/IPO323_BLAST_DB IPO323_Blast_abinitiogenes;
 
+#### October 2013
+#Blastn_shell_taboutput.sh KO_round1.fas ~/Genomes/Velvet_assembly/BLASTdbs/zt79 KO_Flanks79.txt
+
+### Jan 2014
+
+##Blastn_shell_taboutput.sh KO_genes_fasta.txt ~/Genomes/Velvet_assembly/BLASTdbs/zt79 KO_genes_PeterandMegan.txt
+
+
+## ToxA for Shao-yu
+#Blastn_shell_taboutput.sh ToxA.fas ~/Genomes/Pnodorum_SN15 ToxAcds
 

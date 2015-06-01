@@ -5,12 +5,14 @@
 ### and $3 is the name of the output fasta file
 
 cmdfile=$1
+cat $cmdfile | grep -v '^#'>input
 genomedb=$2
 echo Start!
 while read line; do
-#echo "blastdbcmd -db $genomedb "$line" "
-blastdbcmd -db $genomedb $line
-done <$cmdfile >$3.fa
+ #elif #echo "blastdbcmd -db $genomedb "$line" "
+ blastdbcmd -db $genomedb $line
+done <input >$3.fa
+rm input
 echo Finished!
 
 

@@ -1,0 +1,13 @@
+time
+
+java -jar ~/Bin/Trimmomatic-0.27/trimmomatic-0.27.jar PE WAI320_R1.fastq.gz WAI320_R2.fastq.gz \
+WAI320_R1.trimmed.paired.fastq.gz WAI320_R1.trimmed.unpaired.fastq.gz WAI320_R2.trimmed.paired.fastq.gz \
+WAI320_R2.trimmed.unpaired.fastq.gz ILLUMINACLIP:/Users/meganm/Bin/Trimmomatic-0.27/adapters/TruSeq2_PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:24 MINLEN:90
+
+time
+(trimmomatic)
+java -jar ~/Bin/Trimmomatic-0.27/trimmomatic-0.27.jar PE WAI320_R1.fastq.gz WAI320_R2.fastq.gz \
+WAI320_R1.trimmed.paired.fastq.gz WAI320_R1.trimmed.unpaired.fastq.gz WAI320_R2.trimmed.paired.fastq.gz \
+WAI320_R2.trimmed.unpaired.fastq.gz ILLUMINACLIP:/Users/meganm/Bin/Trimmomatic-0.27/adapters/TruSeq2_PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:24 MINLEN:90
+
+

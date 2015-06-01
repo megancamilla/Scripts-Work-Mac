@@ -1,0 +1,1 @@
+cat ../01_500_Complete_250/01_Complete_random_500genes.txt | while read line; do mv "$line" ../01_500_Complete_250/; done

@@ -1,0 +1,4 @@
+LOAD DATA LOCAL INFILE '~/Genomes/MySQL_inputfiles/IPO323input_sept2013.txt'
+INTO TABLE IPO323
+FIELDS TERMINATED BY '\t'
+(Sample_ID,Alternate_name,Year_Sampled,Location_Sampled,Sampled_by);

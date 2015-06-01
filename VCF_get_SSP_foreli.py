@@ -10,11 +10,11 @@ import re
 
 #InFilePATH = 'Cysteine_richSSP.delim'
 #VCFpath= '/Users/meganm/Genomes/GATK_Variant_Detection/Ztritici.GATK.snpeff.vcf'
-InFilePATH = '/Users/meganm/Dropbox/Megans_Data/Zymoseptoria_tritici/Cysteine_rich_250aaLESS.delim'
-VCFpath= '/Users/meganm/Genomes/GATK_Variant_Detection/Ztritici.GATK.snpeff.vcf'
+InFilePATH = '/Users/meganm/Desktop/search.txt'
+VCFpath= '/Users/meganm/Desktop/tosearch.txt'
 INFILE = open(InFilePATH, 'r')
 VCFfile = open(VCFpath, 'r')
-OUTFILE = open('Cysteine_rich250LESS_sneff.vcf', 'w')
+OUTFILE = open('test.out', 'w')
 ##
 OUTFILE2=open('Elis_otherfile', 'w')
 
@@ -27,15 +27,12 @@ Protein_list=[]
 for line in INFILE:
     line = line.strip()
     field = line.split('\t')
-    protein = field[1]
-    Protein_list.append(protein)
-    pattern=re.compile('|'.join(Protein_list))
-
-for line in VCFfile:
-    if pattern.search(line):
+    protein = field[0]
+    for LINE in VCFfile:
+    field2= line.split('\t')
+    protein = field[
+    if protein=
         OUTFILE.write(line)
-    elif """need to find the right thing here""":
-        OUTFILE2.write(line)
 
 
 INFILE.close()

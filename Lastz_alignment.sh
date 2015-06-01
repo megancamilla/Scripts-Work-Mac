@@ -1,4 +1,4 @@
-cd#!/bin/sh
+#!/bin/bash
 
 #  Lastz_alignment.sh
 #  
@@ -9,8 +9,6 @@ cd#!/bin/sh
 ISOLATES=`cat $1`
 for line in $ISOLATES
 do
-lastz /Users/meganm/Genomes/IPO323/Mycosphaerella_graminiocola.allmasked.fa \
-/Volumes/Solomon_Lab/Megan/Spades_assembly/Complete_genomes/$line.spades.fa \
- --yasra95 --output=$line.lastz.sam --strand=both --format=sam --rdotplot=$line_dot --ambiguous=n --chain --maxwordcount=90% --gapped \
- --identity=75 -inner=1000
+lastz /Users/meganm/Genomes/IPO323/IPO323_merged_chromosomes.fa /Volumes/Solomon_Lab/Megan/Spades_assembly/Complete_genomes/$line.spades.fa \
+ --yasra98 --output=$line.lastz.90.sam --strand=both --format=sam  --ambiguous=n --chain  --gapped --identity=90 --inner=1000
 done

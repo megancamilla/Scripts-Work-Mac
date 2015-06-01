@@ -1,0 +1,13 @@
+gnx tools (javascript): min length to consider (scaffold: at least 2 reads); want n25,50,75; fasta file
+java -jar /usr/local/bin/gnx.jar -min 200 -nx 25,50,75 ~/Genomes/Sample_2G6_index27/Trimmed/2G6_velvet_53/contigs.fa
+Done: Velvet total seqs=1730, total length=26.32Mbp, longest scaffold=158353, n25=59669, n50=36699, n75=20001
+N25:	59669	(81 sequences)	(6609328 bp combined)
+N50:	36699	(224 sequences)	(13165030 bp combined)
+N75:	20001	(466 sequences)	(19762543 bp combined)
+
+and
+java -jar /usr/local/bin/gnx.jar -min 200 -nx 25,50,75 ~/Genomes/Sample_2G6_index27/Trimmed/SGA/2G6_scaffold_n5.fa
+Done: SGA total seqs=2271, total length=26.90Mbp, longest scaffold=213067, n25=64341, n50=38103, n75=20825
+N25:	64341	(74 sequences)	(6787147 bp combined)
+N50:	38103	(212 sequences)	(13475869 bp combined)
+N75:	20825	(448 sequences)	(20182753 bp combined)

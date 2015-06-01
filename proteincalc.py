@@ -25,7 +25,9 @@ AminoDict={'A':89.09,
 '*':0.0
 }
 
-ProteinSeq = "FDILSATFTYGNR"
+#ProteinSeq = "FDILSATFTYGNR"
+ProteinSeq = raw_input("Enter a Sequence or Amino Acid:")
+ProteinSeq = ProteinSeq.upper()
 
 MolWeight =0
 
@@ -36,4 +38,4 @@ for AminoAcid in ProteinSeq:
 print "Protein: ", ProteinSeq
 print "Molecular Weight:%.1f " % MolWeight
 
-Aminodict.get(AminoAcid, 0.0)
+AminoDict.get(AminoAcid, 0.0)
