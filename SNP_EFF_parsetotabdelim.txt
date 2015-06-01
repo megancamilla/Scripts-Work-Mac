@@ -1,0 +1,2 @@
+java -jar ~/Bin/snpEff/SnpSift.jar extractFields Trial_reduced_variable.vcf "CHROM" "POS" "REF" "ALT" "QUAL" "FILTER" "EFF[*].EFFECT" "EFF[*].IMPACT" \
+"EFF[*].FUNCLASS" "EFF[*].CODON" "EFF[*].AA" "EFF[*].AA_LEN" "EFF[*].GENE" "EFF[*].TRID" "WAI320" > trial_reduced_variable_tab_delim.txt
